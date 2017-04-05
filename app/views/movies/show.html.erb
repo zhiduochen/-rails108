@@ -6,9 +6,9 @@
       <% if current_user && current_user.is_member_of?(@movie) %>
         <label class="label label-success"> 已加入收藏 </label>
           <%= link_to("取消收藏", quit_movie_path(@movie), method: :review, class: "btn btn-default") %>
-          <%= link_to("Write a Review", new_movie_review_path(@movie), class: "btn btn-default pull-right")%>
+          <%= link_to("写影评", new_movie_review_path(@movie), class: "btn btn-default pull-right")%>
       <% else %>
-        <label class="label label-warning"> 未加入收藏 </label>
+        <label class="label label-warning"> 未加入收藏（如要影评，请先收藏） </label>
           <%= link_to("加入收藏", join_movie_path(@movie), method: :review, class: "btn btn-default") %>
       <% end %>
     </span>
