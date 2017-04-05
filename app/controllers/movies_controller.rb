@@ -70,7 +70,7 @@ class MoviesController < ApplicationController
   private
 
   def find_movie_and_check_permission
-    @movie = movie.find(params[:id])
+    @movie = Movie.find(params[:id])
 
     if current_user != @movie.user
       redirect_to root_path, alert: "You have no permission."
