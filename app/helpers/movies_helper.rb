@@ -1,5 +1,5 @@
 module MoviesHelper
-  def render_group_description(group)
-    simple_format(group.description)
+  def render_movie_description(movie)
+    simple_format(movie.description)
   end
 end
